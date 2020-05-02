@@ -141,7 +141,7 @@ function createFileContent(github_username, project_title, description, installa
         fileContent += `${description} \r\r\n` ;
     }
 
-    fileContent = setUpTableOfContents(fileContent, installation, usage, contributors, license, tests, github_username);
+    fileContent = tableOfContents(fileContent, installation, usage, contributors, license, tests, github_username);
 
     if (installation != "") {
         fileContent += `## Installation \r\n`;
@@ -408,7 +408,7 @@ function getProfileImage(github_userdata) {
     return "User profile image unavailable";
 }
 
-function setUpTableOfContents(fileContent, installation, usage, contributors, license, tests, github_username) {
+function tableOfContents(fileContent, installation, usage, contributors, license, tests, github_username) {
 
     let table_of_contents = [];
 
@@ -441,6 +441,5 @@ function setUpTableOfContents(fileContent, installation, usage, contributors, li
     for (let i = 0; i < table_of_contents.length; i++) {
         fileContent += `${table_of_contents[i]} \r\n`;
     }
-
     return fileContent;
 }
