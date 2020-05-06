@@ -122,7 +122,7 @@ function createFileContent(github_username, project_title, description, installa
     }
 
     if (project_title != "" && license !== "None") {
-        fileContent += `# ${project_title} ${licenseBadge}`;
+        fileContent += `# ${project_title} ${licenseBadge} \r\r\n`;
     }
     else if (project_title != "" && license !== "None") {
         fileContent += `# ${project_title} ${licenseBadge} \r\r\n`;

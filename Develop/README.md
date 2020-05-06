@@ -1,5 +1,6 @@
-# Something ![license](https://img.shields.io/badge/license-GNU%20AGPLv3-blue)## Description 
-Something Again 
+# Good README Generator 
+## Description 
+Created a CLI application that generates a README.md from the users response to the prompts given. 
 ## Table of Contents 
 * [Installation](#installation) 
 * [Usage](#usage) 
@@ -9,23 +10,23 @@ Something Again
 * [Questions](#questions) 
  
 ## Installation 
-1.  Something1  
-2.  SOmething2  
+1.  Install all npm dependencies.  
+2.  Start the application by opening up your folder in the terminal in VS Code.  
+3.  Once application is open in terminal type node index.js and answer the prompts provided.  
  
 ## Usage 
-1.  Do this  
-2.  Do this [developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim]( 
-3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim)  
+1.  Use for creating a good template for README.md.  
+2.  Able to use for any project that needs a detailed README.  
+3.  Lessens the stress of building a README from scartch everytime.   
  
 ## Contributors 
-* [github.com/reinerbonsol](https://github.com/reinerbonsol)
-* [github.com/nicholas-romano](https://github.com/nicholas-romano)
-  
+Reiner Bonsol [github.com/reinerbonsol](https://github.com/reinerbonsol) 
 ## License 
-Something is [GNU AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) licensed 
+There is not a license for this application. 
 ## Tests 
-0. [hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)![rn-5a8f29526bf06900373e7656](https://www.lifewire.com/thmb/kldYrwYnEq7Y7Qr9JeM_XX-dag4=/1024x768/filters:fill(auto,1)/rn-5a8f29526bf06900373e765 
-1. jpg)  
+1.  Read all questions carefully.  
+2.  Make sure all links include the [ttp/https](http/https)protocol.  
+3.  Make sure all packages are installed prior to start.   
  
 ## Questions 
 ![GitHub Profile Image](https://avatars.githubusercontent.com/u/60278309?) 
