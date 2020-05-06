@@ -27,7 +27,7 @@ There is not a license for this application.
 1.  Read all questions carefully.  
 2.  Make sure all links include the [http/https"]("http/https")protocol.  
 3.  Make sure all packages are installed prior to start.  
-4.  The convertable image types are !["](/".png)!["](/".jpg)!["](/".jpeg)!["](/".gif)!["](/".svg)!["](/".raw)!["](/".bmp)![answers](/images/answers.jpg)  
+4.  ![answers](/images/answers.jpg)  
  
 ## Questions 
 ![GitHub Profile Image](https://avatars.githubusercontent.com/u/60278309?) 
