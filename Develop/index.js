@@ -145,16 +145,14 @@ function createFileContent(github_username, project_title, description, installa
 
     if (installation != "") {
         fileContent += `## Installation \r\n`;
-        let convertedImages = convertImages(installation);
-        let convertedLinks = createLinks(convertedImages);
+        let convertedLinks = createLinks(installation);
         let stepList = createOrderedList(convertedLinks);
         fileContent += `${stepList} \r\n`;
     }
 
     if (usage != "") {
         fileContent += `## Usage \r\n`;
-        let convertedImages = convertImages(usage);
-        let convertedLinks = createLinks(convertedImages);
+        let convertedLinks = createLinks(usage);
         let stepList = createOrderedList(convertedLinks);
         fileContent += `${stepList} \r\r\n`;
     }
@@ -177,8 +175,7 @@ function createFileContent(github_username, project_title, description, installa
 
     if (tests != "") {
         fileContent += `## Tests \r\n`;
-        let convertedImages = convertImages(tests);
-        let convertedLinks = createLinks(convertedImages);
+        let convertedLinks = createLinks(tests);
         let stepList = createOrderedList(convertedLinks); 
         fileContent += `${stepList} \r\r\n`;
     }
@@ -220,58 +217,6 @@ function getLicenseLink(license) {
         break;
     }
     return licenseLink;
-}
-
-function convertImages(usage) {
-
-    const imageTypes = [".png", ".jpg", ".jpeg", ".gif", ".svg", ".raw", ".bmp"];
-
-    let newString = "";
-
-    let isImage = false;
-
-    let usageList = usage.split(" ");
-
-    //loop through usage:
-    for (let i = 0; i < usageList.length; i++) {
-
-            isImage = false;
-            
-            //loop through imageTypes:
-            for (let image in imageTypes) {
-
-                let imgExt = usageList[i].indexOf(imageTypes[image]);
-
-                if (imgExt !== -1) {
-
-                    //this is an image
-                    isImage = true;
-
-                    //find image:
-                    let imgStart = usageList[i].lastIndexOf(" ", imgExt);
-
-                    let imgEnd = imgExt + imageTypes[image].length;
-
-                    let img = usageList[i].substring(imgStart, imgEnd);
-
-                    img = img.trim();
-
-                    //find image alias:
-                    let aliasStart = usageList[i].lastIndexOf("/", imgExt);
-
-                    let aliasEnd = imgExt;
-
-                    let alias = usageList[i].substring(aliasStart + 1, aliasEnd);
-
-                    newString += createImage(alias, img);
-                }
-            }
-            //this is not an image:
-            if (isImage === false) {
-                newString += `${usageList[i]} `;
-            }
-    }
-    return newString;
 }
 
 // this function will take the steps and make them into an ordered list for usage, installation, and tests section
@@ -356,14 +301,6 @@ function createLinks(string) {
         }
 }
 
-function createImage(title, image_link) {
-
-    if (image_link.indexOf("http") === -1) {
-        //this is a relative path image:
-        image_link = `/${image_link}`;
-    }
-    return `![${title}](${image_link})`;
-}
 
 function createLink(title, link) {
     return `[${title}](${link})`;
